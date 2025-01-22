@@ -1,2 +1,2 @@
-# pushuplogger
-Pushup Logger Project
+# REMINDER APP
+
