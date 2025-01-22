@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+    {% block title %}
+        Home
+    {% endblock title %}
+
+{% block body %}
+    
+    <!---------------------------- Form ---------------------------->
+    
+    <div class="container">
+      <h1 style="align-items: center; justify-self: center;color: grey;">Please Update</h1>
+        <form action="/update/{{update.sno}}" method="POST">
+            <div class="mb-3">
+                <label for="reminder" class="form-label">Add Reminder</label>
+                <input type="text" class="form-control" id="reminder" value="{{update.reminder}}" name="reminder" aria-describedby="emailHelp">
+            </div>
+
+            <div class="mb-3">
+                <label for="desc" class="form-label">Description</label>
+                <textarea class="form-control" id="desc" rows="4" name="desc" placeholder="Enter your description here">{{update.desc}}</textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Click to Update</button>
+          </form>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+{% endblock body %}
